@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>EMAIL</th>
+        </tr>
+        {% for x in data %}
+        <tr>
+            <td>{{x.Name}}</td>
+            <td>{{x.Pin}}</td>
+            <td>{{x.email}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'new_emp' %}">EMP_FORM</a>
+    
+</body>
+</html>
