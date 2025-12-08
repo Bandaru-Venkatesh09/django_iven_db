@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 from app1.models import employee
 from app1.form import emp_form
@@ -16,7 +16,7 @@ def add_emp(request):
         form=emp_form(request.POST)
         if form.is_valid():
             form.save()
-            return render('home')
+            return redirect('home')
     else:
         form=emp_form()
     context={
