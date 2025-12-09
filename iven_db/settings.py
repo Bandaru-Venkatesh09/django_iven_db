@@ -74,24 +74,24 @@ WSGI_APPLICATION = 'iven_db.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-import os
-if os.environ.get("RENDER"): 
-    DATABASES = { 
-            "default": { 
-                "ENGINE": "django.db.backends.mysql", 
-                "NAME": os.environ.get("MYSQLDATABASE"), 
-                "USER": os.environ.get("MYSQLUSER"), 
-                "PASSWORD": os.environ.get("MYSQLPASSWORD"), 
-                "HOST": os.environ.get("MYSQLHOST"), 
-                "PORT": os.environ.get("MYSQLPORT", "3306"), 
-            } 
-        } 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+# import os
+# if os.environ.get("RENDER"): 
+#     DATABASES = { 
+#             "default": { 
+#                 "ENGINE": "django.db.backends.mysql", 
+#                 "NAME": os.environ.get("MYSQLDATABASE"), 
+#                 "USER": os.environ.get("MYSQLUSER"), 
+#                 "PASSWORD": os.environ.get("MYSQLPASSWORD"), 
+#                 "HOST": os.environ.get("MYSQLHOST"), 
+#                 "PORT": os.environ.get("MYSQLPORT", "3306"), 
+#             } 
+#         } 
 
 
 
